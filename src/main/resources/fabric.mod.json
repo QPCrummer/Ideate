@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ideate",
+  "version": "${version}",
+  "name": "Ideate",
+  "description": "A Create Fabric addon for creating advanced materials",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/ideate/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.qpcrummer.client.ideateClient"
+    ],
+    "main": [
+      "io.github.qpcrummer.Ideate"
+    ]
+  },
+  "mixins": [
+    "ideate.mixins.json",
+    {
+      "config": "ideate.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
